@@ -41,11 +41,11 @@ function validateConfig() {
 // Default color values
 function getDefaultColor(key) {
     const defaults = {
-        backgroundStart: "#ffafbd",
-        backgroundEnd: "#ffc3a0",
-        buttonBackground: "#ff6b6b",
-        buttonHover: "#ff8787",
-        textColor: "#ff4757"
+        backgroundStart: "#89cff0",      // Gradient start (try pastel colors for a soft look)
+        backgroundEnd: "#FFFDF1",        // Gradient end (should complement backgroundStart)
+        buttonBackground: "#0AC4E0",     // Button color (should stand out against the background)
+        buttonHover: "#9CCFFF",          // Button hover color (slightly lighter than buttonBackground)
+        textColor: "#0992C2"             // Text color (make sure it's readable!)
     };
     return defaults[key];
 }
