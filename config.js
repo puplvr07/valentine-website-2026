@@ -41,14 +41,14 @@ const CONFIG = {
     // Love meter messages
     // They show up depending on how far they slide the meter
     loveMessages: {
-        high: "WOOOOW You like me that much?? ☺️☺️☺️",  // Shows when they go past 5000%
+        high: "leget? ☺️",  // Shows when they go past 5000%
     },
 
     // Messages that appear after they say "Yes!"
     celebration: {
-        title: "Yay! I'm the luckiest person in the world! ",
-        message: "Now come get your gift 😍😍😍",
-        emojis: "🩵🩵🩵🩵🩵🩵
+        title: "thankssomuch",
+        message: "kunin m na gift m😍",
+        emojis: "🩵🩵🩵🩵🩵🩵",
               // These will bounce around
     },
 
@@ -56,10 +56,10 @@ const CONFIG = {
     // Use https://colorhunt.co or https://coolors.co to find beautiful color combinations
     colors: {
         backgroundStart: "#89cff0",      // Gradient start (try pastel colors for a soft look)
-        backgroundEnd: "#ffffff",        // Gradient end (should complement backgroundStart)
-        buttonBackground: "#ff6b6b",     // Button color (should stand out against the background)
-        buttonHover: "#ff8787",          // Button hover color (slightly lighter than buttonBackground)
-        textColor: "#ff4757"             // Text color (make sure it's readable!)
+        backgroundEnd: "#FFFDF1",        // Gradient end (should complement backgroundStart)
+        buttonBackground: "#0AC4E0",     // Button color (should stand out against the background)
+        buttonHover: "#9CCFFF",          // Button hover color (slightly lighter than buttonBackground)
+        textColor: "#0992C2"             // Text color (make sure it's readable!)
     },
 
     // Animation settings
@@ -76,9 +76,9 @@ const CONFIG = {
     music: {
         enabled: true,                     // Music feature is enabled
         autoplay: true,                    // Try to autoplay (note: some browsers may block this)
-        musicUrl: "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3", // Music streaming URL
-        startText: "🎵 Play Music",        // Button text to start music
-        stopText: "🔇 Stop Music",         // Button text to stop music
+        musicUrl: "https://res.cloudinary.com/db6yyiiqp/video/upload/v1770889859/magnets_bj9zkx.mp4", // Music streaming URL
+        startText: "🎵",        // Button text to start music
+        stopText: "🔇",         // Button text to stop music
         volume: 0.5                        // Volume level (0.0 to 1.0)
     }
 };
