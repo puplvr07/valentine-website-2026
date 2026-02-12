@@ -13,6 +13,38 @@
     --bounce-speed: 0.5s;
     --heart-explosion-size: 1.5;
 }
+@font-face {
+  font-family: 'Beaming'; /* Name your font */
+  src: url('fonts/Beaming.otf') format('otf'),
+       url('fonts/Beaming.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Helps prevent render-blocking */
+}
+@font-face {
+  font-family: 'Darling'; /* Name your font */
+  src: url('fonts/DarlingGirlDemoRegular.ttf') format('truetype'),
+       url('fonts/DarlingGirlDemoRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Helps prevent render-blocking */
+}
+@font-face {
+  font-family: 'LovelyValentine'; /* Name your font */
+  src: url('fonts/LovelyValentine.ttf') format('truetype'),
+       url('fonts/LovelyValentine.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Helps prevent render-blocking */
+}
+@font-face {
+  font-family: 'ValentineCupcake'; /* Name your font */
+  src: url('fonts/ValentineCupcake.ttf') format('truetype'),
+       url('fonts/ValentineCupcake.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Helps prevent render-blocking */
+}
 
 body {
     margin: 0;
@@ -21,10 +53,17 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
-    font-family: Arial, sans-serif;
+    font-family: 'DarlingGirl', 'ValentineCupcake',sans-serif;
     overflow-x: hidden;
 }
 
+.valentineName{
+    font-family: 'LovelyValentine', cursive;
+    color: var(--text-color);
+    font-size: 2.5em;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(71, 187, 255, 0.3);
+}
 .container {
     background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
