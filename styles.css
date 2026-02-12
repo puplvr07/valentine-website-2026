@@ -131,7 +131,6 @@ body {
     right: 20px;
     margin-top: 0;
     opacity: 0.2;
-    transition: opacity 0.3s;
     transform: scale(0.7);
     z-index: 2;
     animation: subtle-hint 2s infinite alternate;
