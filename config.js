@@ -28,13 +28,12 @@ const CONFIG = {
             noBtn: "No",                                               // Text for "No" button
         },
         second: {
-            text: "On a scale of 1 to 10,000...",                      // Main question text
-            subtext: "how much do you 💙 me?",                         // Subtext (appears below main text)
+            text: "On a scale of 1 to 10,000... how much do u like me",                      // Main question text                   // Subtext (appears below main text)
             startText: "This much!",                                   // Text before the percentage
             nextBtn: "Next "                                         // Text for the next button
         },
         third: {
-            text: "One final question... Will you be my Valentine on February 14th, 2026? 😇", // Combined text
+            text: "One final question... Will you be my Valentine today, February 14th, 2026? 😇", // Combined text
             yesBtn: "Yes!",                                             
             noBtn: "No"                                                 
         }
