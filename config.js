@@ -34,7 +34,7 @@ const CONFIG = {
             nextBtn: "Next "                                         // Text for the next button
         },
         third: {
-            text: "One final question...",                             // Main question text
+            text: "One final question...\nWill you be my Valentine on February 14th, 2026? 😇",                             // Main question text
             subtext: "Will you be my Valentine on February 14th, 2026? 😇", // Subtext (the actual question)
             yesBtn: "Yes!",                                             // Text for "Yes" button
             noBtn: "No"                                                 // Text for "No" button
