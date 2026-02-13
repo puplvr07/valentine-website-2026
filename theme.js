@@ -15,7 +15,13 @@ function applyTheme() {
     root.style.setProperty('--float-distance', config.animations.floatDistance);
     root.style.setProperty('--bounce-speed', config.animations.bounceSpeed);
     root.style.setProperty('--heart-explosion-size', config.animations.heartExplosionSize);
+    
+    // Log to confirm colors are applied
+    console.log("Theme applied:", {
+        buttonColor: config.colors.buttonBackground,
+        textColor: config.colors.textColor
+    });
 }
 
 // Apply theme when the page loads
-window.addEventListener('DOMContentLoaded', applyTheme); 
+window.addEventListener('DOMContentLoaded', applyTheme);
