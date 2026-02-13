@@ -41,7 +41,10 @@ const CONFIG = {
     // Love meter messages
     // They show up depending on how far they slide the meter
     loveMessages: {
-        high: "leget? ☺️",  // Shows when they go past 5000%
+        extreme: "weh???",
+        high: "leget? ☺️",  // Shows when they go past 5000%\
+        normal: "lamat boi",
+
     },
 
     // Messages that appear after they say "Yes!"
