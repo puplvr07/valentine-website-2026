@@ -62,7 +62,7 @@ const CONFIG = {
         backgroundEnd: "#FFFDF1",        
         buttonHover: "#9CCFFF", 
         buttonBackground: "#6CA0FF",
-        textColor: "#0992C2",            
+        textColor: "#ffffff",            
 
     // Animation settings
     // Adjust these if you want faster/slower animations
