@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
     validateConfig();
 
     // Set page title
-    document.getElementById('valentineTitle').textContent = `${config.valentineName} ...`;
+    document.getElementById('valentineTitle').textContent = `${config.valentineName}`;
     
     // ===== FIRST QUESTION =====
     document.getElementById('question1Text').textContent = config.questions.first.text;
