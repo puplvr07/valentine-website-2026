@@ -23,16 +23,19 @@ const CONFIG = {
     questions: {
         first: {
             text: "Do you like me?",                                    // First interaction
+            subtext: "",                                                // Optional subtext (leave empty if not needed)
             yesBtn: "Yes",                                             // Text for "Yes" button
             noBtn: "No",                                               // Text for "No" button
         },
         second: {
-            text: "Weh?",                          // For the love meter
+            text: "On a scale of 1 to 10,000...",                      // Main question text
+            subtext: "how much do you 💙 me?",                         // Subtext (appears below main text)
             startText: "This much!",                                   // Text before the percentage
             nextBtn: "Next "                                         // Text for the next button
         },
         third: {
-            text: "Will you be my Valentine on February 14th, 2026? 😇", // The big question!
+            text: "One final question...",                             // Main question text
+            subtext: "Will you be my Valentine on February 14th, 2026? 😇", // Subtext (the actual question)
             yesBtn: "Yes!",                                             // Text for "Yes" button
             noBtn: "No"                                                 // Text for "No" button
         }
@@ -42,9 +45,8 @@ const CONFIG = {
     // They show up depending on how far they slide the meter
     loveMessages: {
         extreme: "weh???",
-        high: "leget? ☺️",  // Shows when they go past 5000%\
+        high: "leget? ☺️",  // Shows when they go past 5000%
         normal: "lamat boi",
-
     },
 
     // Messages that appear after they say "Yes!"
@@ -87,4 +89,4 @@ const CONFIG = {
 };
 
 // Don't modify anything below this line unless you know what you're doing
-window.VALENTINE_CONFIG = CONFIG; 
+window.VALENTINE_CONFIG = CONFIG;
