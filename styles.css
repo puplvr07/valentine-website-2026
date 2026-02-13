@@ -5,7 +5,7 @@
     --background-color-2: #a0d1ff;
     --button-color: #6b8eff;
     --button-hover: #8799ff;
-    --text-color: #395bca;
+    --text-color: #4a86ca;
 
     /* Animations */
     --float-duration: 15s;
@@ -105,8 +105,8 @@ body {
     padding: 10px 20px;
     margin: 10px;
     border-radius: 20px;
-    
-    color: rgb(89, 161, 255);
+
+    color: rgb(0, 105, 241);
     font-size: 1.1rem;
     cursor: pointer;
     transition: transform 0.3s, background 0.3s;
