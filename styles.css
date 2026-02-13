@@ -172,7 +172,7 @@ body {
 .slider {
     width: 100%;
     height: 25px;
-    background: linear-gradient(to right, #8fb2fc, #5985ff, #252f8f);
+    background: linear-gradient(to right, #8fb2fc, #5985ff, #366cd1);
     -webkit-appearance: none;
     appearance: none;
     outline: none;
