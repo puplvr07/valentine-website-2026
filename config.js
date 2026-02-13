@@ -60,7 +60,8 @@ const CONFIG = {
     colors: {
         backgroundStart: "#89cff0",      
         backgroundEnd: "#FFFDF1",        
-        buttonHover: "#9CCFFF",         
+        buttonHover: "#9CCFFF", 
+        buttonBackground: "#6CA0FF",
         textColor: "#0992C2",            
 
     // Animation settings
