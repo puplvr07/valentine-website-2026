@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
     validateConfig();
 
     // Set page title
-    document.getElementById('valentineTitle').textContent = `${config.valentineName}`;
+    document.getElementById('valentineTitle').textContent = `${config.valentineName} ...`;
     
     // ===== FIRST QUESTION =====
     document.getElementById('question1Text').textContent = config.questions.first.text;
@@ -59,25 +59,11 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // ===== SECOND QUESTION =====
     document.getElementById('question2Text').textContent = config.questions.second.text;
-    
-    // Set subtext if element exists
-    const q2Subtext = document.getElementById('question2Subtext');
-    if (q2Subtext) {
-        q2Subtext.textContent = config.questions.second.subtext || '';
-    }
-    
     document.getElementById('startText').textContent = config.questions.second.startText;
     document.getElementById('nextBtn').textContent = config.questions.second.nextBtn;
     
     // ===== THIRD QUESTION =====
     document.getElementById('question3Text').textContent = config.questions.third.text;
-    
-    // Set subtext if element exists
-    const q3Subtext = document.getElementById('question3Subtext');
-    if (q3Subtext) {
-        q3Subtext.textContent = config.questions.third.subtext || '';
-    }
-    
     document.getElementById('yesBtn3').textContent = config.questions.third.yesBtn;
     document.getElementById('noBtn3').textContent = config.questions.third.noBtn;
 
@@ -140,6 +126,17 @@ function showNextQuestion(questionNumber) {
     if (nextQuestion) {
         nextQuestion.classList.remove('hidden');
     }
+    
+    // If showing question 2, make sure love meter is initialized
+    if (questionNumber === 2) {
+        setTimeout(() => {
+            if (loveMeter) {
+                loveMeter.value = 100;
+                loveValue.textContent = '100';
+                extraLove.classList.add('hidden');
+            }
+        }, 100);
+    }
 }
 
 // Make function globally available
@@ -162,7 +159,7 @@ function moveButton(button) {
 window.moveButton = moveButton;
 
 // ============================================
-// LOVE METER
+// LOVE METER - COMPLETE FUNCTIONALITY
 // ============================================
 let loveMeter, loveValue, extraLove;
 
@@ -171,34 +168,56 @@ function initLoveMeter() {
     loveValue = document.getElementById('loveValue');
     extraLove = document.getElementById('extraLove');
     
-    if (!loveMeter || !loveValue || !extraLove) return;
+    if (!loveMeter || !loveValue || !extraLove) {
+        console.log("Love meter elements not found");
+        return;
+    }
+    
+    console.log("Love meter initialized"); // Debug
     
     // Set initial value
     loveMeter.value = 100;
     loveValue.textContent = '100';
     extraLove.classList.add('hidden');
     
-    // Add event listener
+    // Add event listener for input
     loveMeter.addEventListener('input', updateLoveMeter);
+    
+    // Add event listener for change (when user stops sliding)
+    loveMeter.addEventListener('change', function() {
+        console.log("Love meter changed to: " + this.value); // Debug
+    });
 }
 
 function updateLoveMeter() {
     const value = parseInt(loveMeter.value);
     loveValue.textContent = value;
     
+    console.log("Love meter value: " + value); // Debug
+    
     if (value > 100) {
         extraLove.classList.remove('hidden');
         
-        // Show different messages based on the value
+        // Add special class for extreme values
         if (value >= 5000) {
+            extraLove.classList.add('super-love');
             extraLove.textContent = config.loveMessages.extreme;
         } else if (value > 1000) {
+            extraLove.classList.remove('super-love');
             extraLove.textContent = config.loveMessages.high;
         } else {
+            extraLove.classList.remove('super-love');
             extraLove.textContent = config.loveMessages.normal;
         }
+        
+        // Make the meter grow visually (optional)
+        loveMeter.style.transform = 'scaleX(1.02)';
+        setTimeout(() => {
+            loveMeter.style.transform = 'scaleX(1)';
+        }, 100);
     } else {
         extraLove.classList.add('hidden');
+        extraLove.classList.remove('super-love');
     }
 }
 
@@ -294,12 +313,15 @@ function setupMusicPlayer() {
 }
 
 // ============================================
-// HELPER FUNCTIONS
+// REINITIALIZE LOVE METER WHEN QUESTION 2 SHOWS
 // ============================================
-// Recreate floating elements if window is resized
-window.addEventListener('resize', () => {
-    // Optional: reposition floating elements
-    document.querySelectorAll('.heart, .bear').forEach(element => {
-        element.style.left = Math.random() * 100 + 'vw';
-    });
+// This ensures the love meter works even if the DOM changes
+document.addEventListener('click', function(e) {
+    // Check if we're on question 2 and love meter isn't working
+    const question2 = document.getElementById('question2');
+    if (question2 && !question2.classList.contains('hidden')) {
+        if (!loveMeter || !loveValue || !extraLove) {
+            initLoveMeter();
+        }
+    }
 });
