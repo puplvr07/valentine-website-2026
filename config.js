@@ -62,8 +62,8 @@ colors: {
     backgroundStart: "#89cff0",      
     backgroundEnd: "#FFFDF1",        
     buttonHover: "#9CCFFF", 
-    buttonBackground: "#6CA0FF",
-    textColor: "#0992C2",  // Changed from white to blue so text is visible
+    buttonBackground: "#4ab5fd",
+    textColor: "#ffffff",  // Changed from white to blue so text is visible
 },
 // ^^^ REMOVE THE EXTRA CLOSING BRACE HERE
 
