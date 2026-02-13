@@ -58,14 +58,14 @@ window.addEventListener('DOMContentLoaded', () => {
     // Validate configuration first
     validateConfig();
 
-    // Set texts from config
-    document.getElementById('valentineTitle').textContent = `${config.valentineName} ...`;
+   // Set texts from config
+document.getElementById('valentineTitle').textContent = `${config.valentineName} ...`;
     
-    // Set first question texts
-    document.getElementById('question1Text').textContent = config.questions.first.text;
-    document.getElementById('yesBtn1').textContent = config.questions.first.yesBtn;
-    document.getElementById('noBtn1').textContent = config.questions.first.noBtn;
-    document.getElementById('secretAnswerBtn').textContent = config.questions.first.secretAnswer;
+// Set first question texts
+document.getElementById('question1Text').textContent = config.questions.first.text;
+document.getElementById('yesBtn1').textContent = config.questions.first.yesBtn;
+document.getElementById('noBtn1').textContent = config.questions.first.noBtn;
+// REMOVE THIS LINE: document.getElementById('secretAnswerBtn').textContent = config.questions.first.secretAnswer;
     
     // Set second question texts
     document.getElementById('question2Text').textContent = config.questions.second.text;
